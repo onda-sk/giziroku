@@ -97,4 +97,5 @@ def on_end_meeting(data):
     # 必要に応じてmeeting_dataのクリーンアップ
 
 if __name__ == '__main__':
-    socketio.run(app, host='127.0.0.1', port=14035)
+    # Azure Linux VM/Apache用: 外部からアクセスできるようにhostを0.0.0.0、portを300に設定
+    socketio.run(app, host='0.0.0.0', port=300)
